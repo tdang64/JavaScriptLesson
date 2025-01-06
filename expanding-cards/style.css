@@ -1,0 +1,44 @@
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    height: 200px;
+    flex: 1;
+    padding: 20px;
+    border-radius: 40px;
+    transition: flex 0.5s ease;
+}
+
+.card h2 {
+    display: none;
+}
+
+.card.active {
+    flex: 5;
+}
+
+.card.active h2 {
+    display: block;
+}
+
+.card:nth-child(1) {
+    background-color: blueviolet;
+}
+
+.card:nth-child(2) {
+    background-color: aquamarine;
+}
+
+.card:nth-child(3) {
+    background-color: aqua;
+}
+
+.card:nth-child(4) {
+    background-color: aquamarine;
+}
+
+.card:nth-child(5) {
+    background-color: bisque;
+}

@@ -1,0 +1,47 @@
+:root {
+    --line-border-empty: #000;
+    --line-border-filled: red;
+}
+
+.progress-container {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--line-border-empty);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    transition: all 0.4s ease-in-out;
+}
+
+.circle.active {
+    border-color: var(--line-border-filled);
+}
+
+.progress {
+    height: 4px;
+    background-color: var(--line-border-empty);
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.progress::before {
+    width: var(--width,0);
+    transition: width 0.4s ease-in-out;
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: var(--line-border-filled);
+}
