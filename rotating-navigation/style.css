@@ -1,89 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 button {
-    outline:none;
-    border: none;
-    background: transparent;
-    font-size: 30px;
-    cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .circle-container {
-    width: 200px;
-    height: 200px;
-    background-color: yellow;
-    border-radius: 50%;
-    position: fixed;
-    left: -100px;
-    top: -100px;
-    transition: all 0.5s linear;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: fixed;
+  left: -100px;
+  top: -100px;
+  transition: all 0.5s linear;
+  z-index: 1;
 }
 
 .container.is-open .circle-container {
-    transform: rotate(90deg);
-}
-
-#close {
-    position: absolute;
-    bottom: 45px;
-    left: 60%;
-    width: 30px;
-    height: 30px;
+  transform: rotate(90deg);
 }
 
 #open {
-    position: absolute;
-    top: 45px;
-    left: 60%;
-    width: 30px;
-    height: 30px;
-    transform: rotate(90deg);
+  position: absolute;
+  bottom: 45px;
+  left: 60%;
+  width: 30px;
+  height: 30px;
+}
+
+#close {
+  position: absolute;
+  top: 45px;
+  left: 60%;
+  width: 30px;
+  height: 30px;
+  transform: rotate(90deg);
 }
 
 .content {
-    padding: 80px;
-    transition: all 0.5s linear;
+  padding: 80px;
+  transition: all 0.5s linear;
 }
 
 .content img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .container.is-open .content {
-    transform-origin: top left;
-    transform: rotate(-20deg);
+  transform-origin: top left;
+  transform: rotate(-20deg);
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    /* transform: translateX(-100%); */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  /* transform: translateX(-100%); */
 }
 
 nav ul li {
-    text-transform: uppercase;
-    transform: translateX(-100%);
-    transition: transform 0.5s linear;
-    padding-left: 40px;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  transition: transform 0.5s linear;
+  padding-left: 40px;
 }
 
 nav ul li:nth-child(2) {
-    transition-delay: 0.1s;
-    padding-left: 60px;
+  transition-delay: 0.1s;
+  padding-left: 60px;
 }
 
 nav ul li:nth-child(3) {
-    transition-delay: 0.2s;
-    padding-left: 80px;
+  transition-delay: 0.2s;
+  padding-left: 80px;
 }
 
 .container.is-open nav ul li {
-    transform: translateX(0);
+  transform: translateX(0);
 }
